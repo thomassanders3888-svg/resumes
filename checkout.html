@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ResumePro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2868508772018395" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📄 ResumePro</div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding: 4rem 20px; max-width: 600px;">
+        <h1 style="text-align: center; margin-bottom: 2rem;">Complete Your Purchase</h1>
+        
+        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 id="item-name">Resume Template</h3>
+            <p id="item-price" style="font-size: 1.5rem; color: var(--primary); font-weight: bold;">$5.00</p>
+            
+            <div style="margin: 2rem 0; padding: 1rem; background: var(--light); border-radius: 8px;">
+                <p><strong>Payment Methods:</strong></p>
+                <div style="margin-top: 1rem;">
+                    <button style="width: 100%; padding: 1rem; margin-bottom: 0.5rem; background: #0070ba; color: white; border: none; border-radius: 8px; font-weight: bold;">Pay with PayPal</button>
+                    <button style="width: 100%; padding: 1rem; background: #635bff; color: white; border: none; border-radius: 8px; font-weight: bold;">Pay with Card (Stripe)</button>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.875rem; color: var(--gray); text-align: center;">
+                Secure checkout. Instant delivery.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ResumePro</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get template from URL
+        const params = new URLSearchParams(window.location.search);
+        const template = params.get('template') || 'Resume Template';
+        document.getElementById('item-name').textContent = template;
+    </script>
+</body>
+</html>

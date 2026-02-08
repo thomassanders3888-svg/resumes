@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumePro - Professional Resume Templates</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2868508772018395" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📄 ResumePro</div>
+            <div class="nav-links">
+                <a href="#templates">Templates</a>
+                <a href="#about">About</a>
+                <a href="#free" class="btn-nav">Get Free Template</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Land Your Dream Job</h1>
+            <p>ATS-optimized resume templates designed by recruiters</p>
+            <div class="hero-btns">
+                <a href="#templates" class="btn-primary">Browse Templates</a>
+                <a href="#free" class="btn-secondary">Get Free Template</a>
+            </div>
+            <div class="stats">
+                <div><span class="num">50K+</span> Downloads</div>
+                <div><span class="num">95%</span> ATS Score</div>
+                <div><span class="num">4.9★</span> Rating</div>
+            </div>
+        </div>
+    </header>
+
+    <section id="templates" class="templates">
+        <div class="container">
+            <h2>Professional Resume Templates</h2>
+            <p class="subtitle">One free, premium templates just $5</p>
+            
+            <div class="template-grid">
+                <div class="template-card free" data-name="Entry-Level">
+                    <div class="preview entry-preview"></div>
+                    <span class="badge free-badge">FREE</span>
+                    <h3>Entry-Level</h3>
+                    <p>Perfect for new graduates</p>
+                    <button class="btn-get" onclick="openModal('Entry-Level', 0)">Get Free</button>
+                </div>
+
+                <div class="template-card" data-name="Classic Professional">
+                    <div class="preview classic-preview"></div>
+                    <span class="badge">$5</span>
+                    <h3>Classic Professional</h3>
+                    <p>ATS-friendly traditional</p>
+                    <button class="btn-buy" onclick="openModal('Classic Professional', 5)">Buy Now</button>
+                </div>
+
+                <div class="template-card" data-name="Modern Minimalist">
+                    <div class="preview modern-preview"></div>
+                    <span class="badge">$5</span>
+                    <h3>Modern Minimalist</h3>
+                    <p>Clean contemporary</p>
+                    <button class="btn-buy" onclick="openModal('Modern Minimalist', 5)">Buy Now</button>
+                </div>
+
+                <div class="template-card" data-name="Tech Developer">
+                    <div class="preview tech-preview"></div>
+                    <span class="badge">$5</span>
+                    <h3>Tech/Developer</h3>
+                    <p>Software & engineering</p>
+                    <button class="btn-buy" onclick="openModal('Tech Developer', 5)">Buy Now</button>
+                </div>
+
+                <div class="template-card" data-name="Creative Portfolio">
+                    <div class="preview creative-preview"></div>
+                    <span class="badge">$5</span>
+                    <h3>Creative Portfolio</h3>
+                    <p>Designers & artists</p>
+                    <button class="btn-buy" onclick="openModal('Creative Portfolio', 5)">Buy Now</button>
+                </div>
+
+                <div class="template-card" data-name="Executive">
+                    <div class="preview exec-preview"></div>
+                    <span class="badge">$5</span>
+                    <h3>Executive Senior</h3>
+                    <p>C-Suite leadership</p>
+                    <button class="btn-buy" onclick="openModal('Executive', 5)">Buy Now</button>
+                </div>
+
+                <div class="template-card" data-name="Healthcare">
+                    <div class="preview health-preview"></div>
+                    <span class="badge">$5</span>
+                    <h3>Healthcare</h3>
+                    <p>Medical professionals</p>
+                    <button class="btn-buy" onclick="openModal('Healthcare', 5)">Buy Now</button>
+                </div>
+
+                <div class="template-card" data-name="Sales Marketing">
+                    <div class="preview sales-preview"></div>
+                    <span class="badge">$5</span>
+                    <h3>Sales/Marketing</h3>
+                    <p>Revenue-focused</p>
+                    <button class="btn-buy" onclick="openModal('Sales Marketing', 5)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Our Templates?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="icon">✓</div>
+                    <h3>ATS Optimized</h3>
+                    <p>Pass applicant tracking systems</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">✓</div>
+                    <h3>Recruiter Approved</h3>
+                    <p>Designed with hiring managers</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">✓</div>
+                    <h3>Instant Download</h3>
+                    <p>PDF + DOCX formats</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">✓</div>
+                    <h3>Easy to Edit</h3>
+                    <p>Microsoft Word compatible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Get Template</h2>
+            <form id="email-form" onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="hidden" id="template-name" value="">
+                <input type="hidden" id="template-price" value="">
+                <button type="submit" class="btn-submit" id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ResumePro. ATS-optimized templates.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
